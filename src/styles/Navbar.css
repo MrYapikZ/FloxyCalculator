@@ -1,0 +1,87 @@
+/* General Navbar Styling */
+.navbar-container {
+    position: relative;
+  }
+  
+  .navbar {
+    height: 100vh;
+    width: 250px;
+    background-color: var(--color-darker);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-container.hidden .navbar {
+    transform: translateX(-100%);
+  }
+  
+  .toggle-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: var(--color-dark);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1100;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-button:hover {
+    background-color: #575757;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f4f4f4;
+    margin-bottom: 30px;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .navbar-links li {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar-links a:hover {
+    background-color: var(--color-dark);
+    color: var(--color-primary);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      width: 200px;
+    }
+  
+    .navbar-links a {
+      font-size: 1rem;
+    }
+  }
